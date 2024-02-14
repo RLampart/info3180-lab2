@@ -1,3 +1,47 @@
 body {
     padding-top: 5rem;
 }
+
+div#profile{
+    text-align:center
+}
+
+div#top {
+    padding: 10px;
+    color:antiquewhite;
+    background-color: blueviolet;
+    max-height: 100%;
+  }
+
+div#top img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+  }
+
+div#bio p{
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+
+div#stats{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+div#stats .Post{
+    width:100px;
+    padding: 10px;
+}
+
+button{
+    color:antiquewhite;
+    background-color: blueviolet;
+    border-radius: 10%;
+    width: 120px;
+}
+
+

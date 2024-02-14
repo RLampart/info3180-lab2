@@ -1,6 +1,6 @@
 from app import app
 from flask import render_template, request, redirect, url_for, flash
-
+import datetime
 
 ###
 # Routing for your application.
@@ -10,6 +10,11 @@ from flask import render_template, request, redirect, url_for, flash
 def home():
     """Render website's home page."""
     return render_template('home.html')
+
+@app.route('/profile')
+def profile():
+    """Render website's profile page."""
+    return render_template('profile.html',date = format_date_joined(2020,4,23))
 
 
 @app.route('/about/')
@@ -21,6 +26,12 @@ def about():
 ###
 # The functions below should be applicable to all Flask apps.
 ###
+
+def format_date_joined(y,m,d):
+ date_joined = datetime.date(y,m,d) # a specific date
+ ## Format the date to return only month and year date
+ #print ("Joined " + date_joined.strftime("%b, %Y")) 
+ return date_joined.strftime("%b, %Y")
 
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):

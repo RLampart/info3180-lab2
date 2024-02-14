@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block css %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+{% endblock%}
+{% block main %}
+<div id = profile>
+    <div id = top>
+        <img src="{{ url_for('static', filename='me.jpg') }}" />
+        <h1>Rahiem Lampart</h1>
+        <p>
+            @rlamps <br>
+            Kingston, Jamaica <br>
+            Joined {{date}}
+        </p>
+    </div>
+    <div id = bio>
+        <p>I am a final year student majoring in Computer Science at the University of the West Indies.
+            My favourite topic within Computer Science is Artificial Intelligence. 
+            My hobbies include watching anime and writing fiction.</p>
+    </div>
+    <div id = stats>
+        <div class = Post>
+            <h3>4</h3>
+            <p>  Posts   </p>
+        </div>
+        <div class = Post>
+            <h3>100</h3>
+            <p>Following</p>
+        </div>
+        <div class = Post>
+            <h3>30</h3>
+            <p>Followers</p>
+        </div>
+    </div>
+    <button>Follow</button>
+</div>
+
+{% endblock %}
